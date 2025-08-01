@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -51,6 +54,15 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				kindu: {
+					yellow: 'hsl(var(--kindu-yellow))',
+					orange: 'hsl(var(--kindu-orange))',
+					blue: 'hsl(var(--kindu-blue))',
+					'blue-dark': 'hsl(var(--kindu-blue-dark))',
+					coral: 'hsl(var(--kindu-coral))',
+					cream: 'hsl(var(--kindu-cream))',
+					navy: 'hsl(var(--kindu-navy))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
