@@ -24,7 +24,7 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div 
-            className="flex items-center space-x-3 cursor-pointer float-animation"
+            className="flex items-center space-x-3 cursor-pointer"
             onClick={() => navigate("/")}
           >
             <img 

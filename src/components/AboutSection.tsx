@@ -37,6 +37,80 @@ export const AboutSection = () => {
   return (
     <section id="about-section" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Challenges Faced by Kids */}
+        <div className="mb-20">
+          <h3 className="text-3xl font-bold text-center mb-12">
+            📌 Challenges Faced by Kids
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-6 kindu-shadow hover:kindu-shadow-warm kindu-transition text-center">
+              <div className="w-16 h-16 mx-auto kindu-gradient-coral rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🌊</span>
+              </div>
+              <h4 className="text-xl font-semibold mb-4">Sensory Processing Issues</h4>
+              <p className="text-muted-foreground">
+                Hypersensitivity or under-response to touch, sound, and visual stimuli can make daily activities challenging.
+              </p>
+            </Card>
+            
+            <Card className="p-6 kindu-shadow hover:kindu-shadow-warm kindu-transition text-center">
+              <div className="w-16 h-16 mx-auto kindu-gradient-primary rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">✋</span>
+              </div>
+              <h4 className="text-xl font-semibold mb-4">Fine Motor Difficulties</h4>
+              <p className="text-muted-foreground">
+                Struggles with tasks like buttoning clothes, tying shoes, or holding utensils properly.
+              </p>
+            </Card>
+            
+            <Card className="p-6 kindu-shadow hover:kindu-shadow-warm kindu-transition text-center">
+              <div className="w-16 h-16 mx-auto kindu-gradient-warm rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">👤</span>
+              </div>
+              <h4 className="text-xl font-semibold mb-4">Individual Needs</h4>
+              <p className="text-muted-foreground">
+                Every child has a unique sensory profile requiring personalized approaches and tools.
+              </p>
+            </Card>
+          </div>
+        </div>
+
+        {/* Understanding Autism Today - Kazakhstan Stats */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">📈 Understanding Autism Today</h3>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Autism diagnosis rates in Kazakhstan have grown significantly over the past two decades, highlighting the urgent need for accessible therapeutic tools.
+            </p>
+          </div>
+          
+          <Card className="p-8 kindu-shadow mb-8">
+            <h4 className="text-2xl font-semibold text-center mb-8">Growth of Autism Diagnoses in Kazakhstan</h4>
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">300</div>
+                <div className="text-sm text-muted-foreground">2002</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">1,100</div>
+                <div className="text-sm text-muted-foreground">2010</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">2,300</div>
+                <div className="text-sm text-muted-foreground">2016</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">4,800</div>
+                <div className="text-sm text-muted-foreground">2020</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-accent mb-2">7,500</div>
+                <div className="text-sm text-muted-foreground">2025 (projection)</div>
+              </div>
+            </div>
+          </Card>
+        </div>
+
         {/* Team Introduction */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div className="space-y-6">
@@ -47,19 +121,38 @@ export const AboutSection = () => {
               We are a passionate team from Kazakhstan dedicated to creating innovative solutions for children with autism spectrum disorders. 
               Our name "Qoldau" means "support" in Kazakh, reflecting our mission to provide comprehensive support for families navigating neurodiversity.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Combining expertise in child development, technology, and sustainable design, we've created Kindu cubes to bridge the gap between 
-              therapeutic needs and engaging play experiences.
-            </p>
           </div>
-          <div className="relative">
-            <img
-              src={qoldauTeam}
-              alt="Qoldau Team"
-              className="rounded-2xl kindu-shadow-warm w-full"
-            />
-            <div className="absolute -bottom-4 -right-4 bg-kindu-yellow text-kindu-navy px-4 py-2 rounded-full font-semibold kindu-shadow">
-              Made in Kazakhstan 🇰🇿
+          <div className="space-y-6">
+            <h4 className="text-xl font-semibold mb-6">👥 Meet the Team</h4>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto rounded-full kindu-gradient-primary mb-3 flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">E</span>
+                </div>
+                <h5 className="font-semibold">Emilia</h5>
+                <p className="text-sm text-muted-foreground">3D and Programming</p>
+              </div>
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto rounded-full kindu-gradient-coral mb-3 flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">A</span>
+                </div>
+                <h5 className="font-semibold">Adel</h5>
+                <p className="text-sm text-muted-foreground">Digital Artist</p>
+              </div>
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto rounded-full kindu-gradient-warm mb-3 flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">A</span>
+                </div>
+                <h5 className="font-semibold">Aisha</h5>
+                <p className="text-sm text-muted-foreground">Project Manager</p>
+              </div>
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto rounded-full kindu-gradient-navy mb-3 flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">N</span>
+                </div>
+                <h5 className="font-semibold">Nursulu</h5>
+                <p className="text-sm text-muted-foreground">Web Designer</p>
+              </div>
             </div>
           </div>
         </div>
@@ -82,10 +175,10 @@ export const AboutSection = () => {
           </div>
         </div>
 
-        {/* ASD Statistics */}
+        {/* Global Statistics */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Understanding Autism Today</h3>
+            <h3 className="text-3xl font-bold mb-4">Global Autism Statistics</h3>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Autism Spectrum Disorder affects millions of children worldwide. Early intervention and proper sensory support 
               can make a tremendous difference in a child's development and quality of life.
@@ -123,9 +216,9 @@ export const AboutSection = () => {
         </div>
 
         {/* How Our Cubes Work */}
-        <div className="text-center">
+        <div className="text-center mb-20">
           <h3 className="text-3xl font-bold mb-8">How Kindu Cubes Work</h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Card className="p-6 kindu-shadow">
               <div className="text-6xl mb-4">🎯</div>
               <h4 className="text-xl font-semibold mb-4">1. Personalize</h4>
@@ -148,6 +241,36 @@ export const AboutSection = () => {
               <p className="text-muted-foreground">
                 Children engage with their personalized cube, developing motor skills, emotional regulation, and sensory processing abilities.
               </p>
+            </Card>
+          </div>
+        </div>
+
+        {/* Materials & Safety */}
+        <div className="text-center">
+          <h3 className="text-3xl font-bold mb-8">Materials & Safety</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="p-6 kindu-shadow">
+              <div className="text-4xl mb-4">🌳</div>
+              <h4 className="font-semibold mb-2">Oak Wood Base</h4>
+              <p className="text-sm text-muted-foreground">Coated with eco-friendly oil for durability</p>
+            </Card>
+            
+            <Card className="p-6 kindu-shadow">
+              <div className="text-4xl mb-4">🎨</div>
+              <h4 className="font-semibold mb-2">Safe Paint</h4>
+              <p className="text-sm text-muted-foreground">Water-based, non-toxic paints only</p>
+            </Card>
+            
+            <Card className="p-6 kindu-shadow">
+              <div className="text-4xl mb-4">⚡</div>
+              <h4 className="font-semibold mb-2">Low Voltage</h4>
+              <p className="text-sm text-muted-foreground">Sound & light modules are child-safe</p>
+            </Card>
+            
+            <Card className="p-6 kindu-shadow">
+              <div className="text-4xl mb-4">✅</div>
+              <h4 className="font-semibold mb-2">Certified</h4>
+              <p className="text-sm text-muted-foreground">All modules meet safety standards</p>
             </Card>
           </div>
         </div>

@@ -76,6 +76,7 @@ export const AiAssistant = () => {
       {/* Chat Button */}
       <Button
         onClick={() => setIsOpen(true)}
+        data-ai-assistant
         className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full kindu-gradient-primary hover:scale-110 kindu-transition pulse-glow"
         size="lg"
       >

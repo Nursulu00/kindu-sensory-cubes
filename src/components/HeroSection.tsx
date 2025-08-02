@@ -65,14 +65,23 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Video */}
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden kindu-shadow-warm float-animation">
-              <img
-                src={kinduHeroCube}
-                alt="Kindu Sensory Cube"
-                className="w-full h-full object-cover cube-rotate"
-              />
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="/cube-video.mp4" type="video/mp4" />
+                <img
+                  src={kinduHeroCube}
+                  alt="Kindu Sensory Cube"
+                  className="w-full h-full object-cover"
+                />
+              </video>
             </div>
             
             {/* Floating Elements */}

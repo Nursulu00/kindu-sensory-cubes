@@ -114,43 +114,17 @@ export const PricingSection = () => {
           ))}
         </div>
 
-        {/* Cost Factors */}
-        <div className="grid lg:grid-cols-2 gap-12">
-          <Card className="p-8 kindu-shadow">
-            <h3 className="text-2xl font-semibold mb-6">What Affects the Price?</h3>
-            <div className="space-y-4">
-              <div className="flex justify-between">
-                <span>Basic tactile modules</span>
-                <span className="font-semibold">$15-25 each</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Electronic modules (sounds, lights)</span>
-                <span className="font-semibold">$30-45 each</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Premium cognitive modules</span>
-                <span className="font-semibold">$40-60 each</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Oak cube base</span>
-                <span className="font-semibold">$80</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Assembly & testing</span>
-                <span className="font-semibold">$45</span>
-              </div>
-            </div>
-          </Card>
-
-          <Card className="p-8 kindu-shadow kindu-gradient-hero">
-            <div className="flex items-center gap-3 mb-6">
+        {/* Global Vision */}
+        <div className="flex justify-center">
+          <Card className="p-8 kindu-shadow kindu-gradient-hero max-w-2xl">
+            <div className="flex items-center gap-3 mb-6 justify-center">
               <Globe className="w-8 h-8 text-primary" />
               <h3 className="text-2xl font-semibold">Global Vision</h3>
             </div>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-muted-foreground mb-4 text-center">
               Starting in Kazakhstan, our goal is to make Kindu cubes accessible worldwide. We're developing:
             </p>
-            <ul className="space-y-2 text-muted-foreground">
+            <ul className="space-y-2 text-muted-foreground text-center">
               <li>• International shipping partnerships</li>
               <li>• Regional manufacturing centers</li>
               <li>• Local therapy center partnerships</li>
@@ -158,7 +132,7 @@ export const PricingSection = () => {
               <li>• Cultural adaptation of modules</li>
             </ul>
             <div className="mt-6 p-4 bg-kindu-yellow/20 rounded-lg">
-              <p className="text-sm font-medium">
+              <p className="text-sm font-medium text-center">
                 🌍 Pre-order now to help us expand globally and get early-bird pricing!
               </p>
             </div>

@@ -92,6 +92,61 @@ const sampleModules: Module[] = [
     therapeuticValue: "Emotional recognition, social skills",
     price: 32,
     icon: "😊"
+  },
+  // New modules
+  {
+    id: "zip-zip",
+    name: "Zip-Zip",
+    category: "motor",
+    description: "Zippers and laces for practicing",
+    therapeuticValue: "Fine motor skills, self-care training",
+    price: 28,
+    icon: "🤐"
+  },
+  {
+    id: "bio",
+    name: "Bio",
+    category: "tactile",
+    description: "Natural textures from wood and rope",
+    therapeuticValue: "Sensory grounding, natural connection",
+    price: 32,
+    icon: "🌿"
+  },
+  {
+    id: "eco-sea",
+    name: "Eco-Sea",
+    category: "cognitive",
+    description: "Magnetic ocean sorting game",
+    therapeuticValue: "Logic development, environmental awareness",
+    price: 38,
+    icon: "🌊"
+  },
+  {
+    id: "help-kindu",
+    name: "Help Kindu",
+    category: "cognitive",
+    description: "Maze with character puzzle solving",
+    therapeuticValue: "Empathy building, spatial thinking",
+    price: 42,
+    icon: "🧭"
+  },
+  {
+    id: "hedgehog",
+    name: "Hedgehog",
+    category: "tactile",
+    description: "Tactile hedgehog slider mechanism",
+    therapeuticValue: "Sensory soothing, focus enhancement",
+    price: 30,
+    icon: "🦔"
+  },
+  {
+    id: "press-planet",
+    name: "Press the Planet",
+    category: "visual",
+    description: "Planet squishies with sound feedback",
+    therapeuticValue: "Tactile response, astronomy interest",
+    price: 35,
+    icon: "🪐"
   }
 ];
 
@@ -173,7 +228,7 @@ export default function Builder() {
                 className="relative w-64 h-64 mx-auto mb-6 cursor-pointer"
                 style={{ perspective: "600px" }}
               >
-                <div className="absolute inset-0 transform-gpu cube-rotate" style={{ transformStyle: "preserve-3d" }}>
+                <div className="absolute inset-0 transform-gpu" style={{ transformStyle: "preserve-3d" }}>
                   {cubeFaces.map((face, index) => {
                     const transforms = [
                       "rotateY(0deg) translateZ(128px)",     // Front
@@ -234,15 +289,34 @@ export default function Builder() {
                   <ShoppingCart className="w-4 h-4 mr-2" />
                   Add to Cart - ${getTotalPrice()}
                 </Button>
-                <div className="grid grid-cols-3 gap-2">
+                <div className="grid grid-cols-2 gap-2 mb-2">
                   <Button variant="outline" size="sm">
-                    <Save className="w-4 h-4" />
+                    <Save className="w-4 h-4 mr-1" />
+                    Save
                   </Button>
                   <Button variant="outline" size="sm">
-                    <Share2 className="w-4 h-4" />
+                    <Share2 className="w-4 h-4 mr-1" />
+                    Share
+                  </Button>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => {
+                      setCubeFaces(Array.from({ length: 6 }, (_, i) => ({
+                        id: i + 1,
+                        name: `Face ${i + 1}`,
+                        modules: []
+                      })));
+                      toast.success("Cube reset successfully");
+                    }}
+                  >
+                    <RotateCcw className="w-4 h-4 mr-1" />
+                    Reset
                   </Button>
                   <Button variant="outline" size="sm">
-                    <RotateCcw className="w-4 h-4" />
+                    👁️ Preview
                   </Button>
                 </div>
               </div>
@@ -284,7 +358,16 @@ export default function Builder() {
                   </Select>
                 </div>
                 <div className="flex items-end">
-                  <Button variant="outline" className="w-full">
+                  <Button 
+                    variant="outline" 
+                    className="w-full"
+                    onClick={() => {
+                      const aiButton = document.querySelector('[data-ai-assistant]');
+                      if (aiButton) {
+                        (aiButton as HTMLElement).click();
+                      }
+                    }}
+                  >
                     Get AI Recommendations
                   </Button>
                 </div>
